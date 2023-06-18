@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Basicos 2</title>
+</head>
+<body>
+    <script>
+        //Algoritmo 1
+        // Tamaño Grande - Dado un array, escribe una función que cambie todos los números positivos en él, por el string “big”
+        //  Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5].
+
+        function big(x){
+            for(let i in x){
+                if(x[i] > 0){
+                    x[i] = `big`;
+                }
+            }
+            return x;
+        }
+        console.log(`Intercambia todos los numeros positivos por "big" en el arreglo [-1,3,5,-5] `+big([-1,3,5,-5]));
+
+        //Algoritmo 2
+        // Imprime (print) el menor, devuelve (return) el mayor -
+        //  Crea una función que tome un array de números. La función debería imprimir (print) el menor valor del array, y devolver (return) el mayor.
+        
+        function valorMayor(x){
+            let max = 0; min = 0;
+            for(let i in x){
+                if(x[i] > max){
+                    max = x[i];
+                }
+                else if( x[i] < min){
+                    min = x[i];
+                }
+            }
+            console.log(`Valor menor del arreglo ${x} es ${min}`);
+            return max;
+        }
+        console.log(valorMayor([1,5,-10,15]));
+
+        //Algoritmo 3
+        // Imprime (print) uno, devuelve (return) otro- Crea una función para un array de números
+        //  La función debería imprimir (print) el penúltimo valor y devolver (return) el primer valor impar.
+
+        function valorImpar(x){
+            let impar = 0;
+            for(let i in x){
+                if(x[i] % 2 == 1){
+                    impar = x[i];
+                    break;
+                }
+            }
+            console.log(`El penúltimo valor de ${x} es ${x[x.length-2]}`);
+            return impar;
+        }
+        console.log(valorImpar([2,4,5,7,10]));
+
+        //Algoritmo 4
+        // Doble Visión - Dado un array, crea una función que devuelva un nuevo array donde cada valor se duplique
+        //  Entonces, doble([1,2,3]) debiera devolver [2, 4, 6] sin cambiar el array original.
+        
+        function doble(x){
+            let arregloDoble = []
+            for(let i in x){
+                arregloDoble.push(x[i] += x[i]);
+            }
+            return arregloDoble;
+        }
+        console.log(`El doble del arreglo [1,2,3] es `+doble([1,2,3]));
+
+        //Algoritmo 5
+        // Contar Positivos -  Dado un array de números, crea una función para reemplazar el último valor con el número de valores positivos encontrados en el array
+        //  Ejemplo, contarPositivos([-1,1,1,1]) cambia el array original y devuelve [-1,1,1,3].
+
+        function contarPositivos(x){
+            let contador = 0;
+            for(let i in x){
+                if(x[i] > 0){
+                    contador++;
+                }
+            }
+            x[x.length-1] = contador;
+            return x;
+        }
+        console.log(`La cantidad de numeros positivos en el arreglo [-1,1,1,1] se muestra y se remplaza por el ultimo valor `+contarPositivos([-1,1,1,1]));
+
+        //Algoritmo 6
+        // Pares e Impares - Crea una función que acepte un array. Cada vez que ese array tenga 3 valores impares seguidos, imprime (print) “¡Qué imparcial!”
+        //  y cada vez que tenga 3 pares seguidos, imprime (print) “¡Es para bien!”.
+
+        function parImpar(x){
+            let pares = 0; impares = 0;
+            for(let i in x){
+                if(x[i] % 2 == 1){
+                    impares++;
+                }
+                else if(x[i] % 2 == 0){
+                    pares++;
+                }
+                else if(impares == 3){
+                    console.log(`¡Qué imparcial!`);
+                }
+
+                else if(pares == 3){
+                    console.log(`¡Es para bien!`);
+                }
+            }
+        }
+        console.log(parImpar([3,3,3,2,2,2]));
+
+    </script>
+</body>
+</html>

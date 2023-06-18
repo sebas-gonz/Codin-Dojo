@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+                    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+                    <!-- Iconos de Bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+                        <!-- Barra de navegacion -->
+                        
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-bootstrap"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Enlaces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Elementos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Accion</a></li>
+                        <li><a class="dropdown-item" href="#">Accion 2</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Accion Importante</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 bg-white text-dark" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+                            <!-- Contenido Principal -->
+
+        <div class="jumbotron p-5 mb-5 card text-black bg-body-secondary" mb-3">
+            <div class="container px-5">
+                <h1 class="display-2 mx-5">Hola, Mundo!</h1>
+            </div>
+            <div class="container px-5">
+                <p class="mx-5 my-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente magni mollitia, dignissimos hic neque voluptate placeat quaerat, enim, libero excepturi recusandae eius esse. Error sed ipsam obcaecati est at?</p>
+                <p class="lead my-3">
+                    <a class="btn btn-info btn-lg mx-5" href="#" role="button">Información</a>
+                </p>
+            </div>
+        </div>
+                                    <!-- Informacion Adicional -->
+        <div class="container">
+            <div class="row mx-5 px-3">
+                <div class="col-md-4 px-3">
+                    <h2 class="">Encabezado</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, delectus nulla impedit natus sed non deleniti, magni ad nemo ratione facilis corrupti ut itaque cum
+                        Possimus aperiam exercitationem sunt adipisci.</p>
+                    <p>
+                        <button type="button" class="btn btn-secondary">Más detalles</button>
+                    </p>
+                </div>
+                <div class="col-md-4 px-3">
+                    <h2>Encabezado</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet rem quaerat architecto facere voluptas et vitae impedit! Quisquam quaerat, molestiae hic quod sed recusandae culpa repellat dicta optio dolore fuga.</p>
+                    <p>
+                        <button type="button" class="btn btn-secondary ">Más detalles</button>
+                    </p>
+                </div>
+                <div class="col-md-4 px-3">
+                    <h2>Encabezado</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus cumque optio asperiores pariatur expedita at impedit quia ipsum
+                        culpa incidunt necessitatibus tempora sapiente nesciunt eum ad, animi unde. Voluptatem, deserunt.</p>
+                    <p>
+                        <button type="button" class="btn btn-secondary">Más detalles</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+                                                <!-- Formulario de registro -->
+        <div class="container">
+            <div class="row mx-5 px-3">
+                <form>
+                    <div class="col-md-2">
+                        <div class="">
+                            <label class="sr-only" for="inlineFormInput">Nombre</label>
+                            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                        </div>
+                        <div class="">
+                            <label class="sr-only" for="inlineFormInputGroup">Nombre de usuario</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                <label class="form-check-label" for="autoSizingCheck">
+                                    Recordarme
+                                </label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="submit" class="btn btn-success mb-2">Iniciar Sesion</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <footer class="container">
+            <p class="fst-italic text-center">&copy; Bootstrap 2011-2023</p>
+        </footer>                        
+        <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

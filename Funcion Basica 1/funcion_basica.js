@@ -1,0 +1,149 @@
+//Predice el output de los fragmentos de código a continuación.
+
+// Predicciones correctas: 11
+// Predicciones incorrectas: 4
+
+// Funcion 1
+
+console.log("funcion1");
+function a() {
+    return 35;
+}
+console.log(a())        // output: 35             Prediccion correcta
+
+// Funcion 2
+console.log("funcion2");
+function a() {
+    return 4;
+}
+console.log(a() + a());  // output: 8		Prediccion correcta
+
+//Funcion 3
+
+function a(b) {
+    return b;
+}
+console.log(a(2) + a(4));  //output: 6		Prediccion correcta
+
+// funcion 4
+
+function a(b) {
+    console.log(b);
+    return b * 3;
+}
+console.log(a(3));    // output: 3 , 9		Prediccion correcta
+
+// funcion 5
+
+function a(b) {
+    return b * 4;
+    console.log(b);
+}
+console.log(a(10));    // output: 10 , 40	Prediccion incorrecta
+
+//funcion 6
+
+function a(b) {
+    if (b < 10) {
+        return 2;
+    }
+    else {
+        return 4;
+    }
+    console.log(b);
+}
+console.log(a(15));    // output: 15 , 4		Prediccion Incorrecta
+
+// funcion 7
+
+function a(b, c) {
+    return b * c;
+}
+console.log(10, 3);         // output: 10, 3		Prediccion Correcta
+console.log(a(3, 10));        // output: 30		    Prediccion Correcta
+
+//funcion 8
+
+function a(b) {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+    return i;
+}
+console.log(3);         // output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		Prediccion Incorrecta
+console.log(4);         // output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		Prediccion Incorrecta. En los 2 casos no me di cuenta que no se estaba llamando a la funcion
+
+// funcion 9
+
+function a() {
+    for (var i = 0; i < 10; i++) {
+        i = i + 2;
+        console.log(i);
+    }
+}
+a();                     // output: cuando se llama a la funcion: 2, 5, 8, 11		Prediccion Correcta
+
+// funcion 10
+
+function a(b, c) {
+    for (var i = b; i < c; i++) {
+        console.log(i);
+    }
+    return b * c;
+}
+a(0, 10);       // output: cuando se llama a la funcion: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9		Prediccion Correcta
+console.log(a(0, 10));          //ouput 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0				Prediccion Correcta
+
+// funcion 11
+
+function a() {
+    for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+            console.log(j);
+        }
+        console.log(i);
+    }
+}               // ouput: Nada porque no se llama a la funcion 				Prediccion Correcta
+
+
+// Funcion 12
+
+function a() {
+    for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+            console.log(i, j);
+        }
+        console.log(j, i);
+    }
+}               // output: Nada porque no se llama a la funcion			Prediccion Correcta
+
+
+// funcion 13
+
+var z = 10;
+function a() {
+    var z = 15;
+    console.log(z);
+}
+console.log(z);     //output: 10			Prediccion Correcta
+
+//funcion 14
+
+var z = 10;
+function a() {
+    var z = 15;
+    console.log(z);
+}
+a();                //output cuando se llama a la funcion: 15		Prediccion Correcta
+console.log(z);     //output: 10					                Prediccion Correcta
+
+//funcion 15
+
+var z = 10;
+function a() {
+    var z = 15;
+    console.log(z);
+    return z;
+}
+z = a();
+console.log(z);     //output: 15, 15				Prediccion Correcta

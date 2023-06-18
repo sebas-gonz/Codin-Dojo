@@ -1,0 +1,175 @@
+.container{
+    width: 970px;
+    padding: 0px 15px;
+    margin: 0% auto;
+}
+    .header{
+        width: 100%;   
+    }
+        .img_global{
+            display: inline-block;
+            width: 10%;
+            height: 100px;
+            position: relative;
+            top: 15px;
+            vertical-align: bottom;
+        }
+        .header h1{
+            display: inline-block;
+            margin: 0%;
+            color: #474747;
+        }
+        .header h2{
+            margin: 0%;
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-bottom: 1%;
+            background: linear-gradient(#26679f,#4f81ab,#26679f);
+            color:  #FFFFFF;
+            }
+        .header span{
+            color: #5E8DB5;
+        }    
+    #nav{
+        display: inline-block;
+        padding: 0px 15px 0px 10px;
+        width: 20%;
+        background-image: linear-gradient(#E4E4E4, #FFFFFF);
+    }
+        #nav hr{
+            margin: 30px 0px;
+        }
+        .nav_span{
+            color:#5E8DB5;
+        }
+        #internet{
+            color: #D72626;
+        }
+        #nav a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+        #watch{
+            background-color: #538BB7;
+            border-radius: 7px;
+            height: 20px;
+            padding: 4%;
+            margin-bottom: 3%;
+            color: #FFFFFF;
+            box-shadow: 2px 2px 4px black;
+        }
+        #resources{
+            background-color: #EB9132;
+            border-radius: 7px;
+            height: 20px;
+            padding: 4%;
+            color: #FFFFFF;
+            box-shadow: 2px 2px 4px black;
+        }
+            #learn{
+                width: 95%;
+                height: 280px;
+                background-image: url(../images/ad_background.png);
+                padding: 4%;
+                text-align: center;
+                box-shadow: 2px 2px 4px black;
+            }
+                #learn h2{
+                    color: #FFFFFF;
+                }
+                #learn img{
+                    width: 40%;
+                    height: 100px;
+                    align-self: center;
+                    margin-bottom: 3%;
+                }
+                #learn a{
+                    background-color: #39C7DD;
+                    border-radius: 7px;
+                    width: 165px;
+                    height: 16px;
+                    padding: 4%;
+                    color:#FFFFFF;
+                    margin-left: 1%;
+                    box-shadow: 2px 2px 4px black;
+                }
+    #content{
+        width: 700px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -4px;
+        padding: 0px 20px 0px 30px;
+        background-image: linear-gradient(to top, #FFFFFF 45%,#E4E4E4  97%);
+    }
+        #content h6{
+            margin: 0%;
+            text-align: right;
+            color: #6A6A6A;
+        }
+        #home{
+            width: 3%;
+            vertical-align: top;
+        }
+        #DNS{
+            vertical-align: top;
+            color: #26669C;
+            text-decoration: none;
+        }
+        #phone{
+            width: 7%;
+            height: 40px;
+            display: inline-block;
+            
+        }
+        #number{
+            display: inline-block;
+            margin: 0px 0px 0px 0px;
+            padding-top: 1%;
+            vertical-align: top;
+            color: #00C0DD;
+        }
+            #numer_phone{
+                display: inline-block;
+                width: 91%;
+                text-align: right;
+            }
+        #content span{
+            color:#27A5B8;
+        }
+            #client{
+                display: block;
+                margin-left: 25%;
+                width: 50%;
+            }
+            #content h3{
+                color: #26669C;
+            }
+            #html{  
+                width: 100%;
+            }
+                #big_three {
+                    padding: 1%;
+                    border-top: 5px solid #0087DD;
+                    border-left: 5px solid #0087DD;
+                    border-right: 5px solid #0087DD;
+                }
+                    #image_html{
+                        display: inline-block;
+                        width: 20%;
+                        vertical-align: top;
+                    }
+                    #description{
+                        display: inline-block;
+                        width: 79%;
+                    }
+                    #big_three h3{
+                        margin: 5px 0px 0px 7px;
+                    }
+                    #big_three p{
+                        margin: 10px 0px 0px 0px;
+                        margin-left: 2%;
+                    }
+                    #big_three a{
+                        color: #27A5B8;
+                    }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Funcion 1
+        // Analiza los valores de un array y obtén el promedio (average) de esos valores.
+
+        function printAverage(x){
+            var sum = 0, i = 0;
+            while(i < x.length){                    //Bucle while para recorrer los indices del arreglo
+                sum = sum + x[i++];                 //Suma a la variable sum cada valor del indice del arreglo x[] mientras la condicion del bucle while sea verdadera.
+            }
+            return sum/x.length ;
+        }
+        y = printAverage([1,2,3]);
+        console.log(y); // Imprime 2
+  
+        y = printAverage([2,5,8]);
+        console.log(y); // Imprime 5
+
+        //Funcion 2
+        //Crea un array con todos los enteros impares (odd integers) entre 1 y 255 (inclusive)
+
+        function returnOddArray(x){
+            var impar = [];                         // Bucle para empujar todos los numeros impares en la variable impar []
+            for(let i = 1; i<= x; i++){
+                if((i % 2) != 0){                   //Condicion que evalua si el resto de i entre 2 da 0, si es distinto se emuja el valor de i a la variable impar.
+                    impar.push(i);
+                }
+            }
+            return impar;
+
+        }
+        y = returnOddArray(255);
+        console.log(y); // imprime todos los numeros impares
+
+        //Funcion 3
+        //Eleva al cuadrado cada valor con un array dado, obteniendo el mismo array con valores cambiados..
+
+        function squareValue(x){
+            for(let y in x){            //Bucle para elevar al cuadrado cada indice del arreglo.
+                x[y] = x[y]**2;         
+            }
+        return x;
+        }
+        y = squareValue([1,2,3]);
+        console.log(y); // should log [1,4,9]
+  
+        y = squareValue([2,5,8]);
+        console.log(y); // should log [4,25,64]
+
+    </script>
+</body>
+</html>

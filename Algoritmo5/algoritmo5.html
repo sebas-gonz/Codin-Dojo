@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 5
+    </title>
+</head>
+<body>
+    <script>
+        //Algoritmo 1
+        //Configura un array para que los valores negativos se transformen en 0. Por ejemplo, resetNegativos([1,2,-1,-3]) debiera dar como resultado [1,2,0,0].
+
+        function resetNegativos(x){
+            for(let i in x){
+                if(x[i]< 0){                        //Cuando la condicion sea verdadera, se cambia el indice i en el arreglo x por 0.
+                    x[i] = 0;
+                }
+            }
+            return x;
+        }
+        console.log(resetNegativos([1,2,-1,-3]));
+
+        //Algoritmo 2
+        //Dado un array, mueve todos los valores un espacio de derecha a izquierda eliminando el primer valor y dejando un 0 para el último valor.
+        //Por ejemplo, moverAdelante([1,2,3]) debiera dar como resultado [2,3,0].
+
+    
+    function MoverAdelante(x,z) {
+        for (let i = 0; i < z; i++) {
+            x.push(x[0]);                                   //Empuja en la variable x el indice primera indice, moviendolo al final, despues con el metodo shift se elimina el primer indice
+            x.shift();                                      //Intercambiando lugares segun el valor de la variable z.   
+        }                                                  
+        x[x.length-1] = 0;                                  //Se le asiga al ultimo valor del arreglo "0".
+        return x;
+    }
+    
+    
+    console.log(MoverAdelante([1,2,3],1));
+    console.log(MoverAdelante([1,2,3,4,5,6,7,8,9],1));
+
+        //Algoritmo 3
+        //Configura un array para que el resultado sean los valores en el orden contrario. Por ejemplo, returnReverso([1,2,3]) debe dar [3,2,1].
+
+        function returnReverso(x){
+            var z = [];
+            for(let i = x.length-1; i>=0; i--){             // Recorre el arreglo de forma inversa
+                z.push(x[i]);                               // Agrega a la variable z el valor de x[i]
+            }
+            return z
+        }
+
+        console.log(returnReverso([1,2,3,4,5,6,7,8,9]));
+        console.log(returnReverso([4,7,2,1,8,0,4,2,10]));
+
+        //Algoritmo 4
+        //Crea una función que cambie un array repitiendo sus valores originales (manteniendo el mismo orden)
+        // Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].
+
+        function repetirValores(x){
+            var z = [];                                    //Creo una variable z
+            for( let i in x){
+                z.push(x[i]);                               //Agrego 2 veces el valor del arreglo x[i]
+                z.push(x[i]);
+            }
+            return z;
+        }
+        console.log(repetirValores([4,"Ulysses",42,false]));
+        console.log(repetirValores([1,2,3,4,5]));
+        
+    </script>
+</body>
+</html>

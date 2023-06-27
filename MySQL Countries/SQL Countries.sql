@@ -1,6 +1,3 @@
-SELECT languages.percentage FROM languages;
-SELECT government_form FROM countries;
-SELECT capital FROM countries;
 
 /*Constitutional Monarchy*/
 

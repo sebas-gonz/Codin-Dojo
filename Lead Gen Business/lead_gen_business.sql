@@ -2,9 +2,11 @@
 
 /*1. ¿Qué consulta ejecutaría para obtener los ingresos totales para marzo de 2012? */
 
-SELECT EXTRACT(MONTH FROM billing.charged_datetime) AS month, SUM(billing.amount) AS revenue 
+SELECT MONTHNAME(billing.charged_datetime) AS month, SUM(billing.amount) AS revenue 
 FROM billing
-WHERE billing.charged_datetime >= '2012-03-01' AND billing.charged_datetime < '2012-04-01';
+WHERE billing.charged_datetime >= '2012-03-01' AND billing.charged_datetime < '2012-04-01'
+GROUP BY MONTHNAME(billing.charged_datetime);
+
 
 /*2. ¿Qué consulta ejecutaría para obtener los ingresos totales recaudados del cliente con una identificación de 2? */
 
@@ -43,7 +45,8 @@ SELECT sites.domain_name, COUNT(leads.leads_id) AS number_of_leads, leads.regist
 FROM sites
 JOIN leads ON leads.site_id = sites.site_id
 WHERE leads.registered_datetime >= '2011-01-01' AND leads.registered_datetime <= '2011-02-15'
-GROUP BY sites.domain_name;
+GROUP BY sites.domain_name , leads.registered_datetime;
+
 
 /*6. ¿Qué consulta ejecutaría para obtener una lista de nombres de clientes y el número total de clientes potenciales que hemos generado para cada uno de nuestros clientes entre el 1 de enero de 2011 y el 31 de diciembre de 2011? */
 
@@ -74,7 +77,7 @@ FROM clients
 JOIN sites ON clients.client_id = sites.client_id
 JOIN leads ON sites.site_id = leads.site_id
 WHERE leads.registered_datetime >= '2011-01-01' AND leads.registered_datetime <= '2011-12-31'
-GROUP BY sites.domain_name
+GROUP BY sites.domain_name,  CONCAT(clients.first_name,' ', clients.last_name), clients.client_id, leads.registered_datetime
 ORDER BY clients.client_id;
 
 
@@ -82,8 +85,7 @@ SELECT CONCAT(clients.first_name,' ', clients.last_name) AS client_name, sites.d
 FROM clients
 JOIN sites ON clients.client_id = sites.client_id
 JOIN leads ON sites.site_id = leads.site_id
-GROUP BY sites.domain_name
-ORDER BY clients.client_id;
+GROUP BY sites.domain_name, CONCAT(clients.first_name,' ', clients.last_name);
 
 /*9. Escriba una sola consulta que recupere los ingresos totales recaudados de cada cliente para cada mes del año. Pídalo por ID de cliente. */
 

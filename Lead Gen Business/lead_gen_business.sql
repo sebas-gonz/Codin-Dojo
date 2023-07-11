@@ -92,7 +92,7 @@ GROUP BY sites.domain_name, CONCAT(clients.first_name,' ', clients.last_name);
 SELECT CONCAT(clients.first_name,' ', clients.last_name) AS client_name, SUM(billing.amount) AS total_revenue, MONTH(billing.charged_datetime) AS month, YEAR(billing.charged_datetime) AS year
 FROM clients
 JOIN billing ON clients.client_id = billing.client_id
-GROUP BY clients.client_id ,MONTH(billing.charged_datetime)
+GROUP BY clients.client_id ,MONTH(billing.charged_datetime), YEAR(billing.charged_datetime)
 ORDER BY clients.client_id ASC, YEAR(billing.charged_datetime), MONTH(billing.charged_datetime);
 
 /*10. Escriba una sola consulta que recupere todos los sitios que posee cada cliente. 

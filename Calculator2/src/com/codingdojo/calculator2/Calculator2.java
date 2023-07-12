@@ -19,6 +19,7 @@ public class Calculator2 implements CalculatorInterface {
 	}
 	//funcion que agrega un operador a la pila de operaciones y ejercuta la operacion segun su procedencia
 	public void performOperation(String operacion) {
+		
 		//Si el operador es un =, se realiza el cálculo hasta que la pila de operaciones este vacia
     	if (operacion.equals("=")) {
             while (!operaciones.isEmpty()) {

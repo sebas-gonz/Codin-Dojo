@@ -2,7 +2,6 @@ package com.codingdojo.projectclass;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
 public class Portafolio {
 	
 	Project portafolios = new Project();
@@ -27,6 +26,7 @@ public class Portafolio {
 		
 	
 	}
+	
 
 	public void setProjects(Project object) {
 		projects.add(object);
